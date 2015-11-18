@@ -1,0 +1,30 @@
+<div>
+  <a ui-sref="wordlists">Back to Word Lists</a>
+</div>
+<p>Individual List</p>
+<div>
+  <h2>{{indList.title}} (created by {{indList.listCreator}})</h2>
+</div>
+<div ng-show="showNewWordForm">
+  <form name="newWordForm">
+    <input type="text" ng-model="newWord" placeholder="Enter a new word..." required/>
+    <button ng-disabled="newWordForm.$invalid" ng-click="addToList(newWord)">Add to list</button>
+  </form>
+</div>
+
+<div>
+  <ol ng-show="showWordList">
+    <li ng-repeat="spellingWord in spellingWords">
+      <div ng-show="listedWords">{{spellingWord.word}}</div>
+      <div>
+        <edit-word-directive></edit-word-directive>
+        <tts-directive ng-show="ttsButton"></tts-directive>
+      </div>
+      <br>
+    </li>
+  </ol>
+</div>
+
+<div>
+  <test-directive></test-directive>
+</div>

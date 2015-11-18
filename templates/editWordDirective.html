@@ -1,0 +1,6 @@
+<div ng-show="editInput">
+  <input ng-model="spellingWord.word">
+</div>
+<button ng-show="editButton" ng-click="editWord()">Edit</button>
+<button ng-click="acceptEdit(wordId)" ng-show="acceptButton">Accept</button>
+<!-- <button ng-click="cancelEdit()" ng-show="cancelButton">Cancel</button> -->

@@ -1,0 +1,30 @@
+<!-- <ol ng-show="showTest">
+  <li ng-repeat="spellingWord in spellingWords | filter:search">
+    <input type="text" ng-model="answer" placeholder="Enter answer">
+    <button ng-click="checkAnswer(spellingWord.word, answer)">Check Answer</button>
+    <tts-directive></tts-directive>
+  </li>
+</ol> -->
+
+<ol ng-show="showTest">
+  <ng-form>
+    <li ng-repeat="spellingWord in correctWords = (spellingWords | filter:search) track by $index">
+        <input type="text" ng-model="enteredAnswer[$index]" placeholder="Enter answer">
+      <!-- <button ng-click="checkAnswer(spellingWord.word, answer)">Check Answer</button> -->
+      <tts-directive></tts-directive>
+    </li>
+  </ng-form>
+</ol>
+
+<div ng-show="finalScore">
+  <p>
+    You got {{correctWordsNum}} out of {{spellingWords.length}} correct! Your score is {{percentScore}}%.
+  </p>
+  <p>
+    Score comment: "{{scoreComment}}"
+  </p>
+</div>
+
+<button ng-show="testButton" ng-click="beginTest()">Begin Test</button>
+<button ng-show="closeTestButton" ng-click="closeTest()">Close Test</button>
+<button ng-show="calcScoreButton" $on="enteredAnswer" ng-click="calcScore()"}>Calculate Score</button>

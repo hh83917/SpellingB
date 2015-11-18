@@ -1,0 +1,19 @@
+<div>
+  <a ui-sref='logout'>Logout</a>
+  <p>Spelling Test Word List Setup</p>
+  <form name='addWordListForm'>
+      <input type="text" ng-model="newListTitle" placeholder="Enter a new list name..." required/>
+        created by:
+      <input type="text" ng-model="listCreator" placeholder="List creator name...">
+      <button ng-disabled="addWordListForm.$invalid" ng-click="createList(listCreator, newListTitle)">Add Word List</button>
+  </form>
+
+  <ol>
+    <li ng-repeat="wordlist in wordlists">
+      <a ng-href="#/wordlists/{{wordlist.$id}}">
+        <span>{{wordlist.title}}</span>
+        <span>(created by {{wordlist.listCreator}})</span>
+      </a>
+    </li>
+  </ol>
+</div>
