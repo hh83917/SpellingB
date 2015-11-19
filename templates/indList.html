@@ -1,19 +1,19 @@
 <div>
   <a ui-sref="wordlists">Back to Spelling Lists</a>
 </div>
-<p>Spelling Words</p>
+<p class="innerPageTitle">Spelling Words</p>
 <div>
-  <h2>{{indList.title}} (created by {{indList.listCreator}})</h2>
+  <p class="listTitleText">{{indList.title}} (created by: {{indList.listCreator}})</p>
 </div>
-<div ng-show="showNewWordForm">
+<div class="authForm" ng-show="showNewWordForm">
   <form name="newWordForm">
-    <input type="text" ng-model="newWord" placeholder="Enter a new word..." required/>
+    <input class="allInput" type="text" ng-model="newWord" placeholder="Enter a new word..." required/>
     <button ng-disabled="newWordForm.$invalid" ng-click="addToList(newWord)">Add to list</button>
   </form>
 </div>
 
-<div>
-  <ol ng-show="showWordList">
+<div class="wordListDiv">
+  <ol class="vocabWords" ng-show="showWordList">
     <li ng-repeat="spellingWord in spellingWords">
       <div ng-show="listedWords">{{spellingWord.word}}</div>
       <div>

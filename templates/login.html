@@ -1,15 +1,15 @@
 <div>
-  <h1>Login</h1>
+  <h1 class="authTitle">Login</h1>
 </div>
-<p>{{error}}</p>
-<form ng-submit="login()">
+<p class="errorTxt">{{error}}</p>
+<form class="authForm" ng-submit="login()">
   <div>
-    Email: <input type="email" ng-model="user.email" placeholder="Email"/>
-    Password: <input type="password" ng-model="user.password" placeholder="Password"/>
-    <button type="submit">Login</button>
+    Email: <input class="allInput" type="email" ng-model="user.email" placeholder="Email"/>&nbsp&nbsp&nbsp
+    Password: <input class="allInput" type="password" ng-model="user.password" placeholder="Password"/>
+    <button class="authButton" type="submit">Login</button>
   </div>
 </form>
-<div>
+<div class="authRedirect">
   <p>Don't have an account?</p>
-  <p>Signup here: <button ui-sref="register">Register</button></p>
+  <p>Signup here: <button class="authButton" ui-sref="register">Register</button></p>
 </div>

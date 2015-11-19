@@ -1,0 +1,111 @@
+html {
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #f7f678;
+}
+
+.mainTitle {
+  width: 700px;
+  background-color: #299bee;
+  margin: 0 auto;
+  padding: 1px;
+  text-align: center;
+  border-radius: 100px;
+  font-size: 20px;
+}
+
+.titleFont {
+  font-family: sans-serif;
+  color: #f1e005;
+}
+
+#titleTextB {
+  font-family: cursive;
+  font-size: 50px;
+  color: #f71e00;
+}
+
+.pages {
+  width: 700px;
+  height: 100%;
+  background-color:#e77f36;
+  margin: 20px auto auto auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.authTitle {
+  text-align: center;
+  font-family: monospace;
+}
+
+.authForm {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.errorTxt {
+  color: red;
+}
+
+.authRedirect {
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.allInput {
+  width: 200px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #f6da77;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+button {
+  height: 25px;
+  border-radius: 50px;
+  background-color: #13b100;
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+}
+
+.authButton {
+  height: 30px;
+  border-radius: 50px;
+  background-color: #0aa7ff;
+}
+
+.innerPageTitle {
+  text-align: center;
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.listTitleText {
+  text-align: center;
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.wordListDiv {
+  margin: 0 100px auto 100px;
+}
+
+.vocabWords {
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+.calcScoreDiv {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: monospace;
+}
