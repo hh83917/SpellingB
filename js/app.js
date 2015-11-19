@@ -45,7 +45,7 @@ angular.module('spellingB', ['firebase', 'ui.router'])
       }
     });
 
-  $urlRouterProvider
+  $urlRouterProvider  //.otherwise('login') does not work on hosted server due to ui-router bug, need to use this workaround.
     .otherwise(function($injector, $location) {
       var $state = $injector.get("$state");
       $state.go("login");

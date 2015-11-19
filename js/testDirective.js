@@ -75,7 +75,7 @@ angular.module('spellingB').directive('testDirective', function() {
           // console.log($scope.enteredAnswer[i].toLowerCase());
 
           var lowerCasedAnswer = $scope.enteredAnswer[i].toLowerCase();
-          var correctAnswer = $scope.correctWords[i].word;
+          var correctAnswer = $scope.correctWords[i].word.toLowerCase();
 
           if (lowerCasedAnswer === correctAnswer) {
             correctArr.push(correctAnswer);
