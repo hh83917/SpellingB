@@ -35,7 +35,13 @@ angular.module('spellingB').directive('editWordDirective', function() {
         }, function(error) {
           console.log(error);
         });
-        $scope.cancelEdit();
+        $scope.editButton = true;
+        $scope.acceptButton = false;
+        $scope.deleteButton = false;
+        $scope.ttsButton = true;
+        $scope.editInput = false;
+        $scope.listedWords = true;
+        $scope.cancelButton = false;
       };
 
       $scope.deleteWord = function(wordId) {
@@ -48,7 +54,13 @@ angular.module('spellingB').directive('editWordDirective', function() {
             wordObj.$remove();
           }
         });
-        $scope.cancelEdit();
+        $scope.editButton = true;
+        $scope.acceptButton = false;
+        $scope.deleteButton = false;
+        $scope.ttsButton = true;
+        $scope.editInput = false;
+        $scope.listedWords = true;
+        $scope.cancelButton = false;
       };
 
       var defaultWord = $scope.spellingWord.word.toString();

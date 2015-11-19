@@ -15,7 +15,8 @@ angular.module('spellingB', ['firebase', 'ui.router'])
       controller: 'registerCtrl'
     })
     .state('logout', {
-      url: '/logout',
+      url: '/login',
+      templateUrl: '/templates/login.html',
       controller: function(userService) {
         userService.logout();
       }
@@ -45,5 +46,5 @@ angular.module('spellingB', ['firebase', 'ui.router'])
     });
 
   $urlRouterProvider
-    .otherwise('/wordlists');
+    .otherwise('/login');
 });

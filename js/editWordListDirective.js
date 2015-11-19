@@ -20,7 +20,7 @@ angular.module('spellingB').directive('editWordListDirective', function() {
         $scope.cancelButton = true;
       };
 
-      $scope.acceptEdit = function(listId) {
+      $scope.acceptListNameEdit = function(listId) {
         var selectedListId = wordListService.getSelectedList();
         var listObj = $firebaseObject(new Firebase(fb.url + "/wordlists/" + listId.$id));
         listObj.$loaded().then(function(response) {
@@ -32,21 +32,33 @@ angular.module('spellingB').directive('editWordListDirective', function() {
         }, function(error) {
           console.log(error);
         });
-        $scope.cancelEdit();
+        $scope.wordListDisplay = true;
+        $scope.editListButton = true;
+        $scope.acceptEditButton = false;
+        $scope.deleteButton = false;
+        $scope.cancelButton = false;
+        $scope.editListName = false;
+        $scope.editListCreator = false;
       };
 
-      $scope.deleteList = function(listId) {
+      $scope.deleteWordList = function(listId) {
         var selectedListId = wordListService.getSelectedList();
         var listObj = $firebaseObject(new Firebase(fb.url + "/wordlists/" + listId.$id));
         if (confirm("Are you sure you like to remove this list?") === true) {
           listObj.$remove();
         }
-        $scope.cancelEdit();
+        $scope.wordListDisplay = true;
+        $scope.editListButton = true;
+        $scope.acceptEditButton = false;
+        $scope.deleteButton = false;
+        $scope.cancelButton = false;
+        $scope.editListName = false;
+        $scope.editListCreator = false;
       };
 
       var defaultTitle = $scope.wordlist.title.toString();
       var defaultCreator = $scope.wordlist.listCreator.toString();
-      $scope.cancelEdit = function() {
+      $scope.cancelEditList = function() {
         $scope.wordlist.title = defaultTitle;
         $scope.wordlist.listCreator = defaultCreator;
         $scope.wordListDisplay = true;

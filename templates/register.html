@@ -1,1 +1,15 @@
-Register Page
+<div>
+  <h1>Register</h1>
+</div>
+<p>{{error}}</p>
+<form ng-submit="register()">
+  <div>
+    Email: <input type="email" ng-model="newUser.email" placeholder="Email"/>
+    Password: <input type="password" ng-model="newUser.password" placeholder="Password"/>
+    <button type="submit">Register</button>
+  </div>
+</form>
+<div>
+  <p>Already have an account?</p>
+  <p>Login here: <button ui-sref="login">Login</button></p>
+</div>
