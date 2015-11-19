@@ -12,8 +12,6 @@ angular.module('spellingB').directive('editWordDirective', function() {
       $scope.listedWords = true;
       $scope.cancelButton = false;
 
-      // $scope.spellingWord.$bindTo($scope, "$scope.spellingWord.word");
-
       $scope.editWord = function() {
         $scope.ttsButton = false;
         $scope.editButton = false;
@@ -37,14 +35,7 @@ angular.module('spellingB').directive('editWordDirective', function() {
         }, function(error) {
           console.log(error);
         });
-
-        $scope.editButton = true;
-        $scope.acceptButton = false;
-        $scope.deleteButton = false;
-        $scope.ttsButton = true;
-        $scope.editInput = false;
-        $scope.listedWords = true;
-        $scope.cancelButton = false;
+        $scope.cancelEdit();
       };
 
       $scope.deleteWord = function(wordId) {
@@ -53,20 +44,16 @@ angular.module('spellingB').directive('editWordDirective', function() {
 
         wordObj.$loaded().then(function(response) {
           wordObj.word = $scope.spellingWord.word;
-          wordObj.$remove();
+          if (confirm("Are you sure you like to remove this word") === true) {
+            wordObj.$remove();
+          }
         });
-
-        $scope.editButton = true;
-        $scope.acceptButton = false;
-        $scope.deleteButton = false;
-        $scope.ttsButton = true;
-        $scope.editInput = false;
-        $scope.listedWords = true;
-        $scope.cancelButton = false;
+        $scope.cancelEdit();
       };
 
-
+      var defaultWord = $scope.spellingWord.word.toString();
       $scope.cancelEdit = function() {
+        $scope.spellingWord.word = defaultWord;
         $scope.editButton = true;
         $scope.acceptButton = false;
         $scope.deleteButton = false;

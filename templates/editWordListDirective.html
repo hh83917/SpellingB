@@ -1,5 +1,6 @@
-<input ng-model="">
+<input ng-show="editListName" ng-model="wordlist.title">
+<input ng-show="editListCreator" ng-model="wordlist.listCreator">
 <button ng-show="editListButton" ng-click="editListItem()">Edit</button>
 <button ng-click="cancelEdit()" ng-show="cancelButton">Cancel</button>
-<button ng-show="acceptEditButton">Accept</button>
-<button ng-click="" ng-show="deleteButton">Delete</button>
+<button ng-click="acceptEdit(wordlist)" ng-show="acceptEditButton">Accept</button>
+<button ng-click="deleteList(wordlist)" ng-show="deleteButton">Delete</button>
