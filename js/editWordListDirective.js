@@ -1,7 +1,7 @@
 angular.module('spellingB').directive('editWordListDirective', function() {
   return {
     restrict: 'E',
-    templateUrl: "/templates/editWordListDirective.html",
+    templateUrl: "templates/editWordListDirective.html",
     controller: function($scope, $firebaseObject, wordListService, fb) {
       $scope.editListButton = true;
       $scope.acceptEditButton = false;

@@ -1,7 +1,7 @@
 angular.module('spellingB').directive('editWordDirective', function() {
   return {
     restrict: 'E',
-    templateUrl: "/templates/editWordDirective.html",
+    templateUrl: "templates/editWordDirective.html",
     controller: function($scope, $firebaseObject, wordListService, fb) {
       // console.log($scope.spellingWord.word);
       // console.log(wordListService.getSelectedList());

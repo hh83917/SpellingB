@@ -1,7 +1,7 @@
 angular.module('spellingB').directive('testDirective', function() {
   return {
     restrict: 'E',
-    templateUrl: '/templates/testDirective.html',
+    templateUrl: 'templates/testDirective.html',
     link: function(scope, elem, attrs) {
       var i = 1;
       elem.on("keydown keypress", function(e) {

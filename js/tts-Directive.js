@@ -12,6 +12,6 @@ angular.module('spellingB').directive('ttsDirective', function() {
          speechSynthesis.speak(u);
       };
     },
-    templateUrl: '/templates/tts-Directive.html'
+    templateUrl: 'templates/tts-Directive.html'
   };
 });
