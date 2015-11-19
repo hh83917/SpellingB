@@ -66,6 +66,18 @@ body {
   font-size: 20px;
 }
 
+.innerPageLink {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: monospace;
+  color: blue;
+  text-decoration: none;
+}
+
+.innerPageLink:hover {
+  color: red;
+}
+
 button {
   height: 25px;
   border-radius: 50px;
