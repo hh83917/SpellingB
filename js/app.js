@@ -15,8 +15,8 @@ angular.module('spellingB', ['firebase', 'ui.router'])
       controller: 'registerCtrl'
     })
     .state('logout', {
-      url: '/login',
-      templateUrl: '/templates/login.html',
+      // url: '/login',
+      // templateUrl: '/templates/login.html',
       controller: function(userService) {
         userService.logout();
       }
