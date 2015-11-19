@@ -11,7 +11,7 @@ angular.module('spellingB').service('wordListService', function(fb) {
     return new Firebase(fb.url + "/wordlists/" + wordlistId);
   };
 
-  this.getSelectedWord = function() {
+  this.getSelectedList = function() {
       return selectedWordList;
   };
 

@@ -1,7 +1,7 @@
 <div>
-  <a ui-sref="wordlists">Back to Word Lists</a>
+  <a ui-sref="wordlists">Back to Spelling Lists</a>
 </div>
-<p>Individual List</p>
+<p>Spelling Words</p>
 <div>
   <h2>{{indList.title}} (created by {{indList.listCreator}})</h2>
 </div>
@@ -17,8 +17,8 @@
     <li ng-repeat="spellingWord in spellingWords">
       <div ng-show="listedWords">{{spellingWord.word}}</div>
       <div>
-        <edit-word-directive></edit-word-directive>
         <tts-directive ng-show="ttsButton"></tts-directive>
+        <edit-word-directive></edit-word-directive>
       </div>
       <br>
     </li>
