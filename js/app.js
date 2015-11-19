@@ -6,12 +6,12 @@ angular.module('spellingB', ['firebase', 'ui.router'])
   $stateProvider
     .state('login' ,{
       url: '/login',
-      templateUrl: '/templates/login.html',
+      templateUrl: 'templates/login.html',
       controller: 'loginCtrl'
     })
     .state('register', {
       url: '/register',
-      templateUrl: '/templates/register.html',
+      templateUrl: 'templates/register.html',
       controller: 'registerCtrl'
     })
     .state('logout', {
@@ -23,7 +23,7 @@ angular.module('spellingB', ['firebase', 'ui.router'])
     })
     .state('wordlists', {
       url: '/wordlists',
-      templateUrl: '/templates/wordLists.html',
+      templateUrl: 'templates/wordLists.html',
       controller: 'wordListsCtrl',
       resolve: {
         wordListsRef: function(wordListService) {
@@ -33,7 +33,7 @@ angular.module('spellingB', ['firebase', 'ui.router'])
     })
     .state('indlist', {
       url: '/wordlists/:wordlistId',
-      templateUrl: '/templates/indList.html',
+      templateUrl: 'templates/indList.html',
       controller: 'indListCtrl',
       resolve: {
         indListRef: function(wordListService, $stateParams) {
