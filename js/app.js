@@ -46,5 +46,8 @@ angular.module('spellingB', ['firebase', 'ui.router'])
     });
 
   $urlRouterProvider
-    .otherwise('/login');
+    .otherwise(function($injector, $location){
+      var $state = $injector.get("$state");
+      $state.go('login');
+    });
 });
